@@ -11,6 +11,8 @@ public class ExceptionDemoApp {
             System.out.println("[CAUGHT InvalidDoseException] " + e.getMessage());
         } catch (IllegalArgumentException e) {
             System.out.println("[CAUGHT IllegalArgumentException] " + e.getMessage());
+        } finally {
+            System.out.println("[FINALLY] Dose calculation attempt logged.\n");
         }
     }
 }
