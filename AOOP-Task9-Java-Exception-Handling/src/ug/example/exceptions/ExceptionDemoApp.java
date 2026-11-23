@@ -14,5 +14,16 @@ public class ExceptionDemoApp {
         } finally {
             System.out.println("[FINALLY] Dose calculation attempt logged.\n");
         }
+
+        try {
+            int tablets = calculator.splitTabletsSafely("500", "0");
+            System.out.println("Tablets required: " + tablets);
+        } catch (NumberFormatException e) {
+            System.out.println("[CAUGHT NumberFormatException] Invalid numeric input: " + e.getMessage());
+        } catch (ArithmeticException e) {
+            System.out.println("[CAUGHT ArithmeticException] " + e.getMessage());
+        } finally {
+            System.out.println("[FINALLY] Tablet split check finished.\n");
+        }
     }
 }
