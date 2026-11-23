@@ -18,10 +18,8 @@ public class ExceptionDemoApp {
         try {
             int tablets = calculator.splitTabletsSafely("500", "0");
             System.out.println("Tablets required: " + tablets);
-        } catch (NumberFormatException e) {
-            System.out.println("[CAUGHT NumberFormatException] Invalid numeric input: " + e.getMessage());
-        } catch (ArithmeticException e) {
-            System.out.println("[CAUGHT ArithmeticException] " + e.getMessage());
+        } catch (NumberFormatException | ArithmeticException e) {
+            System.out.println("[MULTI-CATCH] Math/parse failure: " + e.getMessage());
         } finally {
             System.out.println("[FINALLY] Tablet split check finished.\n");
         }
