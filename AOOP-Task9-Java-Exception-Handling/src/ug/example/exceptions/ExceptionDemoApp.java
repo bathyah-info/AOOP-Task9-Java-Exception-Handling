@@ -19,7 +19,7 @@ public class ExceptionDemoApp {
             System.out.println("[FINALLY] Tablet split check finished.");
         }
     }
-
+// I added this private method
     private static double runDoseCheck(DoseCalculator calculator,
                                        double weightKg,
                                        double mgPerKg,
